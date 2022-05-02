@@ -50,6 +50,7 @@ function agregarEmpresa(req, res) {
         empresasModel.nombre = parametros.nombre;
         empresasModel.email = parametros.email;
         empresasModel.password = parametros.password;
+        empresasModel.usuario = parametros.usuario;
         empresasModel.rol = 'Empresa';
         empresasModel.telefono = parametros.telefono
         empresasModel.direccion = parametros.direccion

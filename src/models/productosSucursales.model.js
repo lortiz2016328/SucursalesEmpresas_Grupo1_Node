@@ -2,12 +2,12 @@ const mongoose = require('mongoose');
 
 var Schema=mongoose.Schema;
 
-var ProductosSucursalesSchema = Schema({
-    nombreProductoSucursal: String,
+var productosSucursalSchema = Schema({
+    nombreProducto: String,
     stockSucursal: Number,
-    vendido: Number,
-    idSucursal: { type: Schema.Types.ObjectId, ref: 'Sucursales'}
-
+    cantidadVendida: Number,
+    idSucursal: { type: Schema.Types.ObjectId, ref: 'Sucursales'},
+    idEmpresa: {type: Schema.Types.ObjectId, ref: 'Empresas'}
 })
 
-module.exports=mongoose.model('ProductoSucursales',ProductosSucursalesSchema)
+module.exports=mongoose.model('productosSucursal',productosSucursalSchema)
